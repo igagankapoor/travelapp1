@@ -1,0 +1,41 @@
+<%- include('header1') %>
+
+<div class="container login-page mt-5">
+  <h1 class="login-heading">Sign In</h1>
+
+  <!-- <div class="row"> -->
+    <!-- <div class="col-sm-8"> -->
+      <div class="card">
+        <div class="card-body">
+
+          <!-- Makes POST request to /login route -->
+          <form action="/login" method="POST">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" pattern="([a-z0-9.]{4,})+(@[v]{1}[i]{1}[t]{1}[s]{1}[t]{1}[u]{1}[d]{1}[e]{1}[n]{1}[t]{1})+\.[a.]{1}[c.]{1}\.[i.]{1}[n.]{1}$" placeholder="Your VIT email id" name="username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" placeholder="Password" name="password">
+            </div>
+            <button type="submit" class="btn btn-dark login-btn">Login</button>
+          </form>
+          <h6 class="login2">Incorrect Password.<br>Please Try Again</h6>
+
+        
+    </div>
+    <!-- <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <a class="btn btn-block" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign In with Google
+          </a>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+</div>
+
+<%- include('footer') %>
